@@ -1,4 +1,4 @@
-export default class {
+export default class DB {
 
     static setApiURL (data) {
         this.apiURL = data;
