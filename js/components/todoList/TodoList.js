@@ -28,7 +28,11 @@ export default class TodoList {
     }
     render (){
         this.elt.innerHTML= getTemplate(this) ; 
-        
+        this.renderNotCompletedTodosCount(); 
+    }
+    renderNotCompletedTodosCount (){
+       // Mettre le nombre dans l'innertext .todo-count strong 
+       this.elt.querySelector('.todo-count strong').innerText =  this.todos.filter((todo)=>!todo.completed).length;  ; 
     }
 }
 
@@ -37,7 +41,6 @@ export default class TodoList {
 DB.setApiURL(data.apiURL)
 DB => classe DB dans le fichier DB.js, objet 
 setApiURL => methode à la quelle on envoie des informations 
-
 
  la méthode .map() est utilisée pour transformer un tableau d'objets en un nouveau tableau en appliquant une fonction à chaque élément de l'original.
  this.todos = todos.map(todo => new Todo(todo));, utilise la méthode .map() pour parcourir chaque élément du tableau todos.

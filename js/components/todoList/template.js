@@ -18,7 +18,12 @@ export default function(data) {
             </ul>
           </section>
           <footer class="footer">
-            <span class="todo-count"><strong>1</strong> item(s) left</span>
+            <span class="todo-count">
+            <strong>
+            
+            </strong> 
+            
+            item(s) left</span>
             <ul class="filters">
               <li>
                 <a href="#/" class="selected">All</a>
@@ -49,5 +54,9 @@ export default function(data) {
 
 // NOTES ET COMMENTAIRES : 
 /*
-
+${data.todos.map(todo=>todo.render()).join('')}
+// 'data.todos' est supposé être un tableau contenant des éléments à traiter.
+// La méthode 'map()' applique la fonction 'todo => todo.render()' à chaque élément du tableau.
+.map(todo => todo.render()) : Cette partie de la ligne utilise la méthode map() sur le tableau data.todos. La méthode map() prend une fonction callback en argument et l'applique à chaque élément du tableau. Dans ce cas, la fonction de callback todo => todo.render() est utilisée. Cela signifie que pour chaque élément todo dans le tableau data.todos, la méthode render() est appelée sur cet élément. La méthode render() semble être une fonction ou une méthode définie sur les objets todo pour générer une représentation sous forme de chaîne de caractères de chaque élément.
+// La méthode 'join('')' concatène les chaînes de caractères résultantes sans séparateur.
 */
