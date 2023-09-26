@@ -54,6 +54,7 @@ export default function(data) {
 
 // NOTES ET COMMENTAIRES : 
 /*
+  // /COMMENTAIRES/:Je lance le render de chacun de mes todo. 
 ${data.todos.map(todo=>todo.render()).join('')}
 // 'data.todos' est supposé être un tableau contenant des éléments à traiter.
 // La méthode 'map()' applique la fonction 'todo => todo.render()' à chaque élément du tableau.
